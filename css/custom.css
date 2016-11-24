@@ -140,3 +140,6 @@
 .hover-type-pointer{
     cursor:pointer;
 }
+.black{
+    color:black !important;
+}
