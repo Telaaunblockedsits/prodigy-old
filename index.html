@@ -43,7 +43,7 @@
                     <div class="col-md-2 col-sm-2 col-xs-2 text-left">
                         <a href="#contactus" class="logo-link"><img src="img/logo-blue1.png" alt="Prodigy Logo"></a>
                     </div>
-                    <div class="col-md-offset-7 col-sm-offset-7 col-xs-offset-7 col-md-2 col-sm-2 col-xs-2 text-right" style="margin-top:15px;">
+                    <div class="col-md-offset-8 col-sm-offset-8 col-xs-offset-8 col-md-2 col-sm-2 col-xs-2 text-left" style="margin-top:15px;">
                         <a href="#contactus" class="logo-link"><img src="img/contact-phone-icon-2.png" alt="Contact Us" height="90" width="90"></a>
                     </div>
                 </div>
@@ -350,6 +350,22 @@
         })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
         ga('create', 'UA-55507640-4', 'auto');
         ga('send', 'pageview');
+        
+        //slide to the hashed section
+        (function(){
+              $(window).load(function(){
+                // Remove the # from the hash, as different browsers may or may not include it
+                var hash = location.hash.replace('#','');
+                console.log(hash);
+                if(hash != ''){
+
+                   // Clear the hash in the URL
+                   // location.hash = '';   // delete front "//" if you want to change the address bar
+                    $('html, body').animate({ scrollTop: $('#'+hash).offset().top}, 1000);
+
+                   }
+            });
+        })();
     </script>
 </body>
 

@@ -7,7 +7,6 @@ var cbpHorizontalMenu = (function () {
     function f() {
         g.on("click", a);
         b.on("click", function (h) {
-            h.stopPropagation()
         })
     }
 
